@@ -24,7 +24,6 @@ defcon_local_chapters,etc/meatspace/events/meetups
 devsecops,rabbitholes/defensive
 dfir,rabbitholes/defensive
 embedded,rabbitholes/technical_domains
-etc/culture/history+etc/culture
 exploit_development,rabbitholes/offensive/vulnerability_discovery
 game_console_hacking,rabbitholes/technical_domains
 generative,etc/culture/art
@@ -39,6 +38,7 @@ hackerspaces|rest_of_the_world,etc/meatspace/hackerspaces
 hackerspaces|usa+canada,etc/meatspace/
 hardware_hacking,rabbitholes/technical_domains
 hashcracking,rabbitholes/offensive
+history,etc/culture
 ics,rabbitholes/technical_domains
 infosec_pr,etc/teamwork/companies
 initiatives,etc/teamwork
