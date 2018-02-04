@@ -125,16 +125,12 @@
       ],
       "entities": {
         "hashtags": [
-          
         ],
         "urls": [
-          
         ],
         "user_mentions": [
-          
         ],
         "symbols": [
-          
         ],
         "media": [
           {
@@ -258,7 +254,6 @@
     "favorite_count": 142,
     "entities": {
       "hashtags": [
-        
       ],
       "urls": [
         {
@@ -272,10 +267,8 @@
         }
       ],
       "user_mentions": [
-        
       ],
       "symbols": [
-        
       ]
     },
     "favorited": false,
@@ -291,10 +284,8 @@
   "favorite_count": 0,
   "entities": {
     "hashtags": [
-      
     ],
     "urls": [
-      
     ],
     "user_mentions": [
       {
@@ -309,7 +300,6 @@
       }
     ],
     "symbols": [
-      
     ]
   },
   "favorited": false,
