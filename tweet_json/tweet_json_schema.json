@@ -97,9 +97,9 @@
     },
     "entities": {
       "type": "Entities",
-      "description": "Entities which have been parsed out of the text of the Tweet. Additionally see Entities in Twitter Objects ."
-      "internal_link": '<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Entities schema</a>'
-      "external_link": '<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object" >Twitter documentation</a>'
+      "description": "Entities which have been parsed out of the text of the Tweet. Additionally see Entities in Twitter Objects .",
+      "internal_link": "<a href= 'https://github.com/1337list/test-data/tree/master/tweet_json' >Entities schema</a>",
+      "external_link": "<a href= 'https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object'>Twitter documentation</a>"
     },
     "favorited": {
       "type": "boolean",

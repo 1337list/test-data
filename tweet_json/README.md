@@ -104,8 +104,8 @@ Tweets are the basic atomic building block of all things Twitter. Tweets are als
        This attribute contains a representation of the original Tweet that was retweeted. Note that retweets 
        of retweets do not show representations of the intermediary retweet, but only the original Tweet. 
        (Users can also unretweet a retweet they created by deleting their retweet.)",
-      "internal_link": "<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Tweet schema</a>",
-      "external_link": "<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object" >Twitter documentation</a>"
+      "internal_link": "<a href= 'https://github.com/1337list/test-data/tree/master/tweet_json'>Tweet schema</a>",
+      "external_link": "<a href= 'https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object' >Twitter documentation</a>"
     },
     "is_quote_status": {
       "type": "boolean",
@@ -133,8 +133,8 @@ Tweets are the basic atomic building block of all things Twitter. Tweets are als
       "type": "Entities",
       "description": "Entities which have been parsed out of the text of the Tweet. Additionally 
        see Entities in Twitter Objects .",
-      "internal_link": "<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Entities schema</a>",
-      "external_link": "<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object" >Twitter documentation</a>"
+      "internal_link": "<a href= 'https://github.com/1337list/test-data/tree/master/tweet_json/entities_object' >Entities schema</a>",
+      "external_link": "<a href= 'https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object'>Twitter documentation</a>"
     },
     "favorited": {
       "type": "boolean",

@@ -1,7 +1,9 @@
-# User object schema
-The User object contains public Twitter account metadata and describes the of the Tweet. Users can be anyone or anything. They Tweet, Retweet, add Quotes to Tweets, follow others, create lists, have a home timeline, can be mentioned, and can be looked up in bulk.
-In case of Retweets and Quoted Tweets, the top-level user object represents what account took that action, and the JSON payload will include a second user for the account that created the original Tweet.
-In general these user metadata values are relatively constant. Some fields never change, such as the account ID (provided as both a number and a string) and when the account was created. Other metadata can occasionally change, such as the account (display) name, description, location, and other profile details. Some metadata frequently changes, such as the number of Tweets the account has posted (statuses_count) and its number of followers (followers_count).
+# Entities object schema
+Entities provide metadata and additional contextual information about content posted on Twitter. The entities section provides arrays of common things included in Tweets: hashtags, user mentions, links, stock tickers (symbols), Twitter polls, and attached media. These arrays are convenient for developers when ingesting Tweets, since Twitter has essentially pre-processed, or pre-parsed, the text body. Instead of needing to explicitly search and find these entities in the Tweet body, your parser can go straight to this JSON section and there they are.
+
+Beyond providing parsing conveniences, the entities section also provides useful ‘value-add’ metadata. For example, if you are using the Enhanced URLs enrichment, URL metadata include fully-expanded URLs, as well as associated website titles and descriptions. Another example is when there are user mentions, the entities metadata include the numeric user ID, which are useful when making requests to many Twitter APIs.
+
+Every Tweet JSON payload includes an entities section, with the minimum set of hashtags, urls, user_mentions, and symbols attributes, even if none of those entities are part of the Tweet message.
 <pre>
 {
   "type": "User",

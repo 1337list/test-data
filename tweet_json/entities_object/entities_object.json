@@ -1,0 +1,32 @@
+{
+  "type": "Entities",
+  "description": "Entities which have been parsed out of the text of the Tweet. Additionally see Entities in Twitter Objects .",
+  "internal_link": "<a href= 'https://github.com/1337list/test-data/tree/master/tweet_json' >Entities schema</a>",
+  "external_link": "<a href= 'https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object'>Twitter documentation</a>",
+  "properties": {
+    "hashtags": {
+      "type": "Array of Hashtag Objects",
+      "description": "Represents hashtags which have been parsed out of the Tweet text.",
+      "internal_link": "<a href= 'https://github.com/1337list/test-data/tree/master/tweet_json/hashtag' >Hashtag schema</a>",
+      "external_link": "<a href= 'https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#hashtag'>Twitter documentation</a>"
+    },
+    "urls": {
+      "type": "Array of URL Objects",
+      "description": "Represents URLs included in the text of a Tweet.",
+      "internal_link": "<a href= 'https://github.com/1337list/test-data/tree/master/tweet_json/url' >Url schema</a>",
+      "external_link": "<a href= 'https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#urls'>Twitter documentation</a>"
+    },
+    "user_mentions": {
+      "type": "Array of User Mention Objects",
+      "description": "Represents other Twitter users mentioned in the text of the Tweet.",
+      "internal_link": "<a href= 'https://github.com/1337list/test-data/tree/master/tweet_json/user_mention' >User mention schema</a>",
+      "external_link": "<a href= 'https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#mentions'>Twitter documentation</a>"
+    },
+    "symbols": {
+      "type": "Array of Symbol Objects",
+      "description": "Represents symbols, i.e. $cashtags, included in the text of the Tweet.",
+      "internal_link": "<a href= 'https://github.com/1337list/test-data/tree/master/tweet_json/symbol' >Symbol schema</a>",
+      "external_link": "<a href= 'https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#symbols'>Twitter documentation</a>"
+    }
+  }
+}
