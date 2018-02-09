@@ -1,7 +1,7 @@
 {
   "type": "Tweet",
-  "internal_link": '<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Tweet object schema</a>'
-  "external_link": '<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object" >Twitter documentation</a>'
+  "internal_link": "<a href='https://github.com/1337list/test-data/tree/master/tweet_json'>Tweet object schema</a>",
+  "external_link": "<a href='https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object'>Twitter documentation</a>",
   "properties": {
     "created_at": {
       "type": "string",
@@ -49,13 +49,13 @@
     },
     "user": {
       "type": "User",
-      "description": "The user who posted this Tweet. See User data dictionary for complete list of attributes."
-      "internal_link": '<a href= "https://github.com/1337list/test-data/blob/master/tweet_json/tweet_json_schema.json#L5" >User schema</a>
-      "external_link": '<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object" >Twitter documentation</a>
+      "description": "The user who posted this Tweet. See User data dictionary for complete list of attributes.",
+      "internal_link": "<a href= 'https://github.com/1337list/test-data/blob/master/tweet_json/tweet_json_schema.json#L5'>User schema</a>",
+      "external_link": "<a href= 'https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object'>Twitter documentation</a>"
     },
     "geo": {
-      "type": "null",
-      "description": "An explanation about the purpose of this instance."
+      "type": "Object",
+      "description": "Deprecated. Nullable. Use the coordinates field instead. This deprecated attribute has its coordinates formatted as [lat, long], while all other Tweet geo is formatted as [long, lat]."
     },
     "coordinates": {
       "type": "coordinates",
@@ -72,8 +72,8 @@
     "retweeted_status": {
       "type": "Tweet",
       "description": "Users can amplify the broadcast of Tweets authored by other users by retweeting . Retweets can be distinguished from typical Tweets by the existence of a retweeted_status attribute. This attribute contains a representation of the original Tweet that was retweeted. Note that retweets of retweets do not show representations of the intermediary retweet, but only the original Tweet. (Users can also unretweet a retweet they created by deleting their retweet.)",
-      "internal_link": '<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Tweet schema</a>'
-      "external_link": '<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object" >Twitter documentation</a>'
+      "internal_link": "<a href='https://github.com/1337list/test-data/tree/master/tweet_json'>Tweet schema</a>",
+      "external_link": "<a href= 'https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object'>Twitter documentation</a>"
     },
     "is_quote_status": {
       "type": "boolean",
