@@ -30,7 +30,7 @@ Tweets are the basic atomic building block of all things Twitter. Tweets are als
     },
     "truncated": {
       "type": "boolean",
-      "description": "Indicates whether the value of the text parameter was truncated, for example, as a <br>        result of a retweet exceeding the original Tweet text length limit of 140 characters. Truncated text<br>         will end in ellipsis, like this ... Since Twitter now rejects long Tweets vs truncating them, the large <br>        majority of Tweets will have this set to false . Note that while native retweets may have their <br>        toplevel text property shortened, the original text will be available under the retweeted_status object and the truncated parameter will be set to the value of the original status (in most cases, false ). "
+      "description": "Indicates whether the value of the text parameter was truncated, for example, as a <br>        result of a retweet exceeding the original Tweet text length limit of 140 characters. Truncated text<br>         will end in ellipsis, like this ... Since Twitter now rejects long Tweets vs truncating them, the large <br>        majority of Tweets will have this set to false . Note that while native retweets may have their <br>        toplevel text property shortened, the original text will be available under the retweeted_status <br>        object and the truncated parameter will be set to the value of the original status (in most cases, false ). "
     },
     "in_reply_to_status_id": {
       "type": "int64",
