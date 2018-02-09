@@ -1,5 +1,5 @@
 {
-  "type": "Tweet object",
+  "type": "Tweet",
   "internal_link": '<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Tweet object schema</a>'
   "external_link": '<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object" >Twitter documentation</a>'
   "properties": {

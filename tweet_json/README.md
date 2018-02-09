@@ -5,8 +5,8 @@ Tweets are the basic atomic building block of all things Twitter. Tweets are als
 <pre>
 {
   "type": "Tweet object",
-  "internal_link": "<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Tweet object schema</a>",
-  "external_link": "<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object" >Twitter documentation</a>",
+  "internal_link": "<a href= 'https://github.com/1337list/test-data/tree/master/tweet_json' >Tweet object schema</a>",
+  "external_link": "<a href= 'https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object' >Twitter documentation</a>",
   "properties": {
     "created_at": {
       "type": "string",
@@ -75,7 +75,7 @@ Tweets are the basic atomic building block of all things Twitter. Tweets are als
       "type": "User",
       "description": "The user who posted this Tweet. See User data dictionary for complete list of 
        attributes.",
-      "internal_link": "<a href= "https://github.com/1337list/test-data/blob/master/tweet_json/tweet_json_schema.json#L5" >User schema</a>",
+      "internal_link": "<a href= 'https://github.com/1337list/test-data/tree/master/tweet_json/user_object' >User object schema</a>",
       "external_link": "<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object" >Twitter documentation</a>"
     },
     "geo": {
