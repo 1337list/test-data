@@ -14,47 +14,67 @@ Tweets are the basic atomic building block of all things Twitter. Tweets are als
     },
     "id": {
       "type": "integer",
-      "description": "The integer representation of the unique identifier for this Tweet. This number is greater than 53 bits and some programming languages may have difficulty/silent defects in interpreting it. Using a signed 64 bit integer for storing this identifier is safe. Use id_str for fetching the identifier to stay on the safe side. See Twitter IDs, JSON and Snowflake"
+      "description": "The integer representation of the unique identifier for this Tweet. 
+       This number is greater than 53 bits and some programming languages may have difficulty/silent  
+       defects in interpreting it. Using a signed 64 bit integer for storing this identifier is safe. 
+       Use id_str for fetching the identifier to stay on the safe side. See Twitter IDs, JSON and Snowflake"
     },
     "id_str": {
       "type": "string",
-      "description": "The string representation of the unique identifier for this Tweet. Implementations should use this rather than the large integer in id."
+      "description": "The string representation of the unique identifier for this Tweet. Implementations 
+       should use this rather than the large integer in id."
     },
     "text": {
       "type": "string",
-      "description": "The actual UTF-8 text of the status update. See twitter-text for details on what characters are currently considered valid."
+      "description": "The actual UTF-8 text of the status update. See twitter-text for details on what 
+       characters are currently considered valid."
     },
     "source": {
       "type": "string",
-      "description": "Utility used to post the Tweet, as an HTML-formatted string. Tweets from the Twitter website have a source value of web."
+      "description": "Utility used to post the Tweet, as an HTML-formatted string. Tweets from the Twitter 
+       website have a source value of web."
     },
     "truncated": {
       "type": "boolean",
-      "description": "Indicates whether the value of the text parameter was truncated, for example, as a result of a retweet exceeding the original Tweet text length limit of 140 characters. Truncated text will end in ellipsis, like this ... Since Twitter now rejects long Tweets vs truncating them, the large majority of Tweets will have this set to false . Note that while native retweets may have their toplevel text property shortened, the original text will be available under the retweeted_status object and the truncated parameter will be set to the value of the original status (in most cases, false ). "
+      "description": "Indicates whether the value of the text parameter was truncated, for example, as a 
+       result of a retweet exceeding the original Tweet text length limit of 140 characters. Truncated text 
+       will end in ellipsis, like this ... Since Twitter now rejects long Tweets vs truncating them, 
+       the large majority of Tweets will have this set to false . Note that while native retweets may have 
+       their toplevel text property shortened, the original text will be available under the 
+       retweeted_status object and the truncated parameter will be set to the value of the original 
+       status (in most cases, false ). "
     },
     "in_reply_to_status_id": {
       "type": "int64",
-      "description": "Nullable. If the represented Tweet is a reply, this field will contain the integer representation of the original Tweet’s ID."
+      "description": "Nullable. If the represented Tweet is a reply, this field will contain the integer 
+       representation of the original Tweet’s ID."
     },
     "in_reply_to_status_id_str": {
       "type": "string",
-      "description": "Nullable. If the represented Tweet is a reply, this field will contain the string representation of the original Tweet’s ID.."
+      "description": "Nullable. If the represented Tweet is a reply, this field will contain the string 
+       representation of the original Tweet’s ID.."
     },
     "in_reply_to_user_id": {
       "type": "int64",
-      "description": "Nullable. If the represented Tweet is a reply, this field will contain the integer representation of the original Tweet’s author ID. This will not necessarily always be the user directly mentioned in the Tweet."
+      "description": "Nullable. If the represented Tweet is a reply, this field will contain the integer 
+       representation of the original Tweet’s author ID. This will not necessarily always be the user 
+       directly mentioned in the Tweet."
     },
     "in_reply_to_user_id_str": {
       "type": "string",
-      "description": "Nullable. If the represented Tweet is a reply, this field will contain the string representation of the original Tweet’s author ID. This will not necessarily always be the user directly mentioned in the Tweet. "
+      "description": "Nullable. If the represented Tweet is a reply, this field will contain the string 
+       representation of the original Tweet’s author ID. This will not necessarily always be the user 
+       directly mentioned in the Tweet."
     },
     "in_reply_to_screen_name": {
       "type": "string",
-      "description": "Nullable. If the represented Tweet is a reply, this field will contain the screen name of the original Tweet’s author."
+      "description": "Nullable. If the represented Tweet is a reply, this field will contain the screen 
+       name of the original Tweet’s author."
     },
     "user": {
       "type": "User",
-      "description": "The user who posted this Tweet. See User data dictionary for complete list of attributes."
+      "description": "The user who posted this Tweet. See User data dictionary for complete list of 
+       attributes."
       "internal_link": '<a href= "https://github.com/1337list/test-data/blob/master/tweet_json/tweet_json_schema.json#L5" >User schema</a>
       "external_link": '<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object" >Twitter documentation</a>
     },
@@ -64,11 +84,14 @@ Tweets are the basic atomic building block of all things Twitter. Tweets are als
     },
     "coordinates": {
       "type": "coordinates",
-      "description": "Nullable. (formerly geo) Represents the geographic location of this Tweet as reported by the user or client application. The inner coordinates array is formatted as geoJSON (longitude first, then latitude)."
+      "description": "Nullable. (formerly geo) Represents the geographic location of this Tweet as reported 
+       by the user or client application. The inner coordinates array is formatted as geoJSON (longitude 
+       first, then latitude)."
     },
     "place": {
       "type": "places",
-      "description": "Nullable. When present, indicates that the tweet is associated (but not necessarily originating from) a Place ."
+      "description": "Nullable. When present, indicates that the tweet is associated (but not necessarily 
+       originating from) a Place ."
     },
     "contributors": {
       "type": "null",
@@ -76,7 +99,11 @@ Tweets are the basic atomic building block of all things Twitter. Tweets are als
     },
     "retweeted_status": {
       "type": "Tweet",
-      "description": "Users can amplify the broadcast of Tweets authored by other users by retweeting . Retweets can be distinguished from typical Tweets by the existence of a retweeted_status attribute. This attribute contains a representation of the original Tweet that was retweeted. Note that retweets of retweets do not show representations of the intermediary retweet, but only the original Tweet. (Users can also unretweet a retweet they created by deleting their retweet.)",
+      "description": "Users can amplify the broadcast of Tweets authored by other users by retweeting . 
+       Retweets can be distinguished from typical Tweets by the existence of a retweeted_status attribute. 
+       This attribute contains a representation of the original Tweet that was retweeted. Note that retweets 
+       of retweets do not show representations of the intermediary retweet, but only the original Tweet. 
+       (Users can also unretweet a retweet they created by deleting their retweet.)",
       "internal_link": '<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Tweet schema</a>'
       "external_link": '<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object" >Twitter documentation</a>'
     },
@@ -86,7 +113,8 @@ Tweets are the basic atomic building block of all things Twitter. Tweets are als
     },
     "quote_count": {
       "type": "integer",
-      "description": "Nullable. Indicates approximately how many times this Tweet has been quoted by Twitter users."
+      "description": "Nullable. Indicates approximately how many times this Tweet has been quoted by 
+       Twitter users."
     },
     "reply_count": {
       "type": "integer",
@@ -98,11 +126,13 @@ Tweets are the basic atomic building block of all things Twitter. Tweets are als
     },
     "favorite_count": {
       "type": "integer",
-      "description": "Nullable. Indicates approximately how many times this Tweet has been liked by Twitter users."
+      "description": "Nullable. Indicates approximately how many times this Tweet has been liked by 
+       Twitter users."
     },
     "entities": {
       "type": "Entities",
-      "description": "Entities which have been parsed out of the text of the Tweet. Additionally see Entities in Twitter Objects ."
+      "description": "Entities which have been parsed out of the text of the Tweet. Additionally 
+       see Entities in Twitter Objects ."
       "internal_link": '<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Entities schema</a>'
       "external_link": '<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object" >Twitter documentation</a>'
     },
@@ -116,11 +146,14 @@ Tweets are the basic atomic building block of all things Twitter. Tweets are als
     },
     "filter_level": {
       "type": "string",
-      "description": "Indicates the maximum value of the filter_level parameter which may be used and still stream this Tweet. So a value of medium will be streamed on none, low, and medium streams."
+      "description": "Indicates the maximum value of the filter_level parameter which may be used and 
+       still stream this Tweet. So a value of medium will be streamed on none, low, and medium streams."
     },
     "lang": {
       "type": "string",
-      "description": "Nullable. When present, indicates a BCP 47 language identifier corresponding to the machine-detected language of the Tweet text, or und if no language could be detected. See more documentation HERE"
+      "description": "Nullable. When present, indicates a BCP 47 language identifier corresponding 
+       to the machine-detected language of the Tweet text, or und if no language could be detected. 
+       See more documentation HERE"
     },
     "timestamp_ms": {
       "type": "string",
