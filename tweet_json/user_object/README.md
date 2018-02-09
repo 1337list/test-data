@@ -5,7 +5,7 @@ In general these user metadata values are relatively constant. Some fields never
 <pre>
   "type": "User",
   "internal_link": "<a href= 'https://github.com/1337list/test-data/tree/master/tweet_json/user_object' >User object schema</a>",
-  "external_link": "<a href= 'https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object' >Twitter documentation</a>",
+  "external_link": "<a href= 'https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object' >Twitter documentation</a>",
   "properties": {
     "id": {
       "type": "int64",
@@ -21,11 +21,11 @@ In general these user metadata values are relatively constant. Some fields never
     },
     "screen_name": {
       "type": "string",
-      "description": "The screen name, handle, or alias that this user identifies themselves with. screen_names are unique <br>        but subject to change. Use id_str as a user identifier whenever possible. Typically a maximum of 15 characters long, <br>        but some historical accounts may exist with longer names."
+      "description": "The screen name, handle, or alias that this user identifies themselves with. screen_names <br>        are unique but subject to change. Use id_str as a user identifier whenever possible. <br>        Typically a maximum of 15 characters long, but some historical accounts may exist with longer names."
     },
     "location": {
       "type": "string",
-      "description": "Nullable . The user-defined location for this account’s profile. Not necessarily a location, nor <br>        machine-parseable. This field will occasionally be fuzzily interpreted by the Search service."
+      "description": "Nullable . The user-defined location for this account’s profile. Not necessarily a location, <br>        nor machine-parseable. This field will occasionally be fuzzily interpreted by the Search service."
     },
     "url": {
       "type": "null",
@@ -49,11 +49,11 @@ In general these user metadata values are relatively constant. Some fields never
     },
     "followers_count": {
       "type": "integer",
-      "description": "The number of followers this account currently has. Under certain conditions of duress, this field <br>        will temporarily indicate “0”."
+      "description": "The number of followers this account currently has. Under certain conditions of duress,<br>         this field will temporarily indicate “0”."
     },
     "friends_count": {
       "type": "integer",
-      "description": "The number of users this account is following (AKA their “followings”). Under certain conditions of <br>        duress, this field will temporarily indicate “0”."
+      "description": "The number of users this account is following (AKA their “followings”). Under certain <br>        conditions of duress, this field will temporarily indicate “0”."
     },
     "listed_count": {
       "type": "integer",
