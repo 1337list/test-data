@@ -2,11 +2,11 @@
 
 Tweets are the basic atomic building block of all things Twitter. Tweets are also known as “status updates.” The Tweet object has a long list of ‘root-level’ attributes, including fundamental attributes such as id, created_at, and text. Tweet objects are also the ‘parent’ object to several child objects. Tweet child objects include user, entities, and extended_entities. Tweets that are geo-tagged will have a place child object.
 
-<pre>
+<pre lang="json">
 {
   "type": "Tweet object",
-  "internal_link": '<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Tweet object schema</a>'
-  "external_link": '<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object" >Twitter documentation</a>'
+  "internal_link": "<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Tweet object schema</a>",
+  "external_link": "<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object" >Twitter documentation</a>",
   "properties": {
     "created_at": {
       "type": "string",
@@ -74,9 +74,9 @@ Tweets are the basic atomic building block of all things Twitter. Tweets are als
     "user": {
       "type": "User",
       "description": "The user who posted this Tweet. See User data dictionary for complete list of 
-       attributes."
-      "internal_link": '<a href= "https://github.com/1337list/test-data/blob/master/tweet_json/tweet_json_schema.json#L5" >User schema</a>
-      "external_link": '<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object" >Twitter documentation</a>
+       attributes.",
+      "internal_link": "<a href= "https://github.com/1337list/test-data/blob/master/tweet_json/tweet_json_schema.json#L5" >User schema</a>",
+      "external_link": "<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object" >Twitter documentation</a>"
     },
     "geo": {
       "type": "null",
@@ -104,8 +104,8 @@ Tweets are the basic atomic building block of all things Twitter. Tweets are als
        This attribute contains a representation of the original Tweet that was retweeted. Note that retweets 
        of retweets do not show representations of the intermediary retweet, but only the original Tweet. 
        (Users can also unretweet a retweet they created by deleting their retweet.)",
-      "internal_link": '<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Tweet schema</a>'
-      "external_link": '<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object" >Twitter documentation</a>'
+      "internal_link": "<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Tweet schema</a>",
+      "external_link": "<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object" >Twitter documentation</a>"
     },
     "is_quote_status": {
       "type": "boolean",
@@ -132,9 +132,9 @@ Tweets are the basic atomic building block of all things Twitter. Tweets are als
     "entities": {
       "type": "Entities",
       "description": "Entities which have been parsed out of the text of the Tweet. Additionally 
-       see Entities in Twitter Objects ."
-      "internal_link": '<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Entities schema</a>'
-      "external_link": '<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object" >Twitter documentation</a>'
+       see Entities in Twitter Objects .",
+      "internal_link": "<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Entities schema</a>",
+      "external_link": "<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object" >Twitter documentation</a>"
     },
     "favorited": {
       "type": "boolean",
