@@ -3,6 +3,7 @@ The User object contains public Twitter account metadata and describes the of th
 In case of Retweets and Quoted Tweets, the top-level user object represents what account took that action, and the JSON payload will include a second user for the account that created the original Tweet.
 In general these user metadata values are relatively constant. Some fields never change, such as the account ID (provided as both a number and a string) and when the account was created. Other metadata can occasionally change, such as the account (display) name, description, location, and other profile details. Some metadata frequently changes, such as the number of Tweets the account has posted (statuses_count) and its number of followers (followers_count).
 <pre>
+{
   "type": "User",
   "internal_link": "<a href= 'https://github.com/1337list/test-data/tree/master/tweet_json/user_object' >User object schema</a>",
   "external_link": "<a href= 'https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object' >Twitter documentation</a>",
@@ -61,7 +62,7 @@ In general these user metadata values are relatively constant. Some fields never
     },
     "favourites_count": {
       "type": "integer",
-      "description": "The number of Tweets this user has liked in the account’s lifetime. British spelling used in the <br>        field name for historical reasons."
+      "description": "The number of Tweets this user has liked in the account’s lifetime. British spelling <br>        used in the field name for historical reasons."
     },
     "statuses_count": {
       "type": "integer",
@@ -85,15 +86,15 @@ In general these user metadata values are relatively constant. Some fields never
     },
     "lang": {
       "type": "string",
-      "description": "The BCP 47 code for the user’s self-declared user interface language. May or may not have anything <br>        to do with the content of their Tweets."
+      "description": "The BCP 47 code for the user’s self-declared user interface language. May or may <br>        not have anything to do with the content of their Tweets."
     },
     "contributors_enabled": {
       "type": "boolean",
-      "description": "Indicates that the user has an account with “contributor mode” enabled, allowing for Tweets issued by <br>        the user to be co-authored by another account. Rarely true (this is a legacy field)."
+      "description": "Indicates that the user has an account with “contributor mode” enabled, allowing <br>        for Tweets issued by the user to be co-authored by another account. Rarely true (this is a legacy field)."
     },
     "is_translator": {
       "type": "boolean",
-      "description": "Deprecated. When true, indicates that the user is a participant in Twitter’s translator community."
+      "description": "Deprecated. When true, indicates that the user is a participant in Twitter’s <br>        translator community."
     },
     "profile_background_color": {
       "type": "string",
@@ -101,27 +102,27 @@ In general these user metadata values are relatively constant. Some fields never
     },
     "profile_background_image_url": {
       "type": "string",
-      "description": "A HTTP-based URL pointing to the background image the user has uploaded for their profile."
+      "description": "A HTTP-based URL pointing to the background image the user has uploaded <br>        for their profile."
     },
     "profile_background_image_url_https": {
       "type": "string",
-      "description": "A HTTPS-based URL pointing to the background image the user has uploaded for their profile."
+      "description": "A HTTPS-based URL pointing to the background image the user has uploaded <br>        for their profile."
     },
     "profile_background_tile": {
       "type": "boolean",
-      "description": "When true, indicates that the user’s profile_background_image_url should be tiled when displayed."
+      "description": "When true, indicates that the user’s profile_background_image_url should <br>        be tiled when displayed."
     },
     "profile_link_color": {
       "type": "string",
-      "description": "The hexadecimal color the user has chosen to display links with in their Twitter UI."
+      "description": "The hexadecimal color the user has chosen to display links with in their <br>        Twitter UI."
     },
     "profile_sidebar_border_color": {
       "type": "string",
-      "description": "The hexadecimal color the user has chosen to display sidebar borders with in their Twitter UI."
+      "description": "The hexadecimal color the user has chosen to display sidebar borders with <br>        in their Twitter UI."
     },
     "profile_sidebar_fill_color": {
       "type": "string",
-      "description": "The hexadecimal color the user has chosen to display sidebar backgrounds with in their Twitter UI."
+      "description": "The hexadecimal color the user has chosen to display sidebar backgrounds <br>        with in their Twitter UI."
     },
     "profile_text_color": {
       "type": "string",
@@ -145,15 +146,15 @@ In general these user metadata values are relatively constant. Some fields never
     },
     "default_profile": {
       "type": "boolean",
-      "description": "When true, indicates that the user has not altered the theme or background of their user profile."
+      "description": "When true, indicates that the user has not altered the theme or background <br>        of their user profile."
     },
     "default_profile_image": {
       "type": "boolean",
-      "description": "When true, indicates that the user has not uploaded their own profile image and a default image is <br>        used instead."
+      "description": "When true, indicates that the user has not uploaded their own profile image and <br>        a default image is used instead."
     },
     "following": {
       "type": "boolean",
-      "description": "Deprecated. Nullable . Perspectival . Deprecated. When true, indicates that the authenticating user is <br>        following this user. Some false negatives are possible when set to “false,” but these false negatives are <br>        increasingly being represented as “null” instead."
+      "description": "Deprecated. Nullable . Perspectival . Deprecated. When true, indicates that the <br>        authenticating user is following this user. Some false negatives are possible when set to “false,” but these false negatives are <br>        increasingly being represented as “null” instead."
     },
     "follow_request_sent": {
       "type": "null",
@@ -161,7 +162,7 @@ In general these user metadata values are relatively constant. Some fields never
     },
     "notifications": {
       "type": "boolean",
-      "description": "Deprecated. Nullable .May incorrectly report “false” at times. Indicates whether the authenticated <br>        user has chosen to receive this user’s Tweets by SMS. "
+      "description": "Deprecated. Nullable .May incorrectly report “false” at times. Indicates whether the <br>         authenticated user has chosen to receive this user’s Tweets by SMS. "
     }
   }
 }
