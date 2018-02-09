@@ -1,1028 +1,125 @@
 {
-  "$id": "http://example.com/example.json",
-  "type": "object",
-  "definitions": {},
-  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "Tweet object",
+  "internal_link": '<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Tweet object schema</a>'
+  "external_link": '<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object" >Twitter documentation</a>'
   "properties": {
     "created_at": {
-      "$id": "/properties/created_at",
-      "type": "string"
+      "type": "string",
+      "description": "UTC time when this Tweet was created."
     },
     "id": {
-      "$id": "/properties/id",
-      "type": "integer"
+      "type": "integer",
+      "description": "The integer representation of the unique identifier for this Tweet. This number is greater than 53 bits and some programming languages may have difficulty/silent defects in interpreting it. Using a signed 64 bit integer for storing this identifier is safe. Use id_str for fetching the identifier to stay on the safe side. See Twitter IDs, JSON and Snowflake"
     },
     "id_str": {
-      "$id": "/properties/id_str",
-      "type": "string"
+      "type": "string",
+      "description": "The string representation of the unique identifier for this Tweet. Implementations should use this rather than the large integer in id."
     },
     "text": {
-      "$id": "/properties/text",
-      "type": "string"
+      "type": "string",
+      "description": "The actual UTF-8 text of the status update. See twitter-text for details on what characters are currently considered valid."
     },
     "source": {
-      "$id": "/properties/source",
-      "type": "string"
+      "type": "string",
+      "description": "Utility used to post the Tweet, as an HTML-formatted string. Tweets from the Twitter website have a source value of web."
     },
     "truncated": {
-      "$id": "/properties/truncated",
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Indicates whether the value of the text parameter was truncated, for example, as a result of a retweet exceeding the original Tweet text length limit of 140 characters. Truncated text will end in ellipsis, like this ... Since Twitter now rejects long Tweets vs truncating them, the large majority of Tweets will have this set to false . Note that while native retweets may have their toplevel text property shortened, the original text will be available under the retweeted_status object and the truncated parameter will be set to the value of the original status (in most cases, false ). "
     },
     "in_reply_to_status_id": {
-      "$id": "/properties/in_reply_to_status_id",
-      "type": "null"
+      "type": "int64",
+      "description": "Nullable. If the represented Tweet is a reply, this field will contain the integer representation of the original Tweet’s ID."
     },
     "in_reply_to_status_id_str": {
-      "$id": "/properties/in_reply_to_status_id_str",
-      "type": "null"
+      "type": "string",
+      "description": "Nullable. If the represented Tweet is a reply, this field will contain the string representation of the original Tweet’s ID.."
     },
     "in_reply_to_user_id": {
-      "$id": "/properties/in_reply_to_user_id",
-      "type": "null"
+      "type": "int64",
+      "description": "Nullable. If the represented Tweet is a reply, this field will contain the integer representation of the original Tweet’s author ID. This will not necessarily always be the user directly mentioned in the Tweet."
     },
     "in_reply_to_user_id_str": {
-      "$id": "/properties/in_reply_to_user_id_str",
-      "type": "null"
+      "type": "string",
+      "description": "Nullable. If the represented Tweet is a reply, this field will contain the string representation of the original Tweet’s author ID. This will not necessarily always be the user directly mentioned in the Tweet. "
     },
     "in_reply_to_screen_name": {
-      "$id": "/properties/in_reply_to_screen_name",
-      "type": "null"
+      "type": "string",
+      "description": "Nullable. If the represented Tweet is a reply, this field will contain the screen name of the original Tweet’s author."
     },
     "user": {
-      "$id": "/properties/user",
-      "type": "object",
-      "properties": {
-        "id": {
-          "$id": "/properties/user/properties/id",
-          "type": "integer"
-        },
-        "id_str": {
-          "$id": "/properties/user/properties/id_str",
-          "type": "string"
-        },
-        "name": {
-          "$id": "/properties/user/properties/name",
-          "type": "string"
-        },
-        "screen_name": {
-          "$id": "/properties/user/properties/screen_name",
-          "type": "string"
-        },
-        "location": {
-          "$id": "/properties/user/properties/location",
-          "type": "string"
-        },
-        "url": {
-          "$id": "/properties/user/properties/url",
-          "type": "null"
-        },
-        "description": {
-          "$id": "/properties/user/properties/description",
-          "type": "string"
-        },
-        "translator_type": {
-          "$id": "/properties/user/properties/translator_type",
-          "type": "string"
-        },
-        "protected": {
-          "$id": "/properties/user/properties/protected",
-          "type": "boolean"
-        },
-        "verified": {
-          "$id": "/properties/user/properties/verified",
-          "type": "boolean"
-        },
-        "followers_count": {
-          "$id": "/properties/user/properties/followers_count",
-          "type": "integer"
-        },
-        "friends_count": {
-          "$id": "/properties/user/properties/friends_count",
-          "type": "integer"
-        },
-        "listed_count": {
-          "$id": "/properties/user/properties/listed_count",
-          "type": "integer"
-        },
-        "favourites_count": {
-          "$id": "/properties/user/properties/favourites_count",
-          "type": "integer"
-        },
-        "statuses_count": {
-          "$id": "/properties/user/properties/statuses_count",
-          "type": "integer"
-        },
-        "created_at": {
-          "$id": "/properties/user/properties/created_at",
-          "type": "string"
-        },
-        "utc_offset": {
-          "$id": "/properties/user/properties/utc_offset",
-          "type": "integer"
-        },
-        "time_zone": {
-          "$id": "/properties/user/properties/time_zone",
-          "type": "string"
-        },
-        "geo_enabled": {
-          "$id": "/properties/user/properties/geo_enabled",
-          "type": "boolean"
-        },
-        "lang": {
-          "$id": "/properties/user/properties/lang",
-          "type": "string"
-        },
-        "contributors_enabled": {
-          "$id": "/properties/user/properties/contributors_enabled",
-          "type": "boolean"
-        },
-        "is_translator": {
-          "$id": "/properties/user/properties/is_translator",
-          "type": "boolean"
-        },
-        "profile_background_color": {
-          "$id": "/properties/user/properties/profile_background_color",
-          "type": "string"
-        },
-        "profile_background_image_url": {
-          "$id": "/properties/user/properties/profile_background_image_url",
-          "type": "string"
-        },
-        "profile_background_image_url_https": {
-          "$id": "/properties/user/properties/profile_background_image_url_https",
-          "type": "string"
-        },
-        "profile_background_tile": {
-          "$id": "/properties/user/properties/profile_background_tile",
-          "type": "boolean"
-        },
-        "profile_link_color": {
-          "$id": "/properties/user/properties/profile_link_color",
-          "type": "string"
-        },
-        "profile_sidebar_border_color": {
-          "$id": "/properties/user/properties/profile_sidebar_border_color",
-          "type": "string"
-        },
-        "profile_sidebar_fill_color": {
-          "$id": "/properties/user/properties/profile_sidebar_fill_color",
-          "type": "string"
-        },
-        "profile_text_color": {
-          "$id": "/properties/user/properties/profile_text_color",
-          "type": "string"
-        },
-        "profile_use_background_image": {
-          "$id": "/properties/user/properties/profile_use_background_image",
-          "type": "boolean"
-        },
-        "profile_image_url": {
-          "$id": "/properties/user/properties/profile_image_url",
-          "type": "string"
-        },
-        "profile_image_url_https": {
-          "$id": "/properties/user/properties/profile_image_url_https",
-          "type": "string"
-        },
-        "profile_banner_url": {
-          "$id": "/properties/user/properties/profile_banner_url",
-          "type": "string"
-        },
-        "default_profile": {
-          "$id": "/properties/user/properties/default_profile",
-          "type": "boolean"
-        },
-        "default_profile_image": {
-          "$id": "/properties/user/properties/default_profile_image",
-          "type": "boolean"
-        },
-        "following": {
-          "$id": "/properties/user/properties/following",
-          "type": "null"
-        },
-        "follow_request_sent": {
-          "$id": "/properties/user/properties/follow_request_sent",
-          "type": "null"
-        },
-        "notifications": {
-          "$id": "/properties/user/properties/notifications",
-          "type": "null"
-        }
-      }
+      "type": "User",
+      "description": "The user who posted this Tweet. See User data dictionary for complete list of attributes."
+      "internal_link": '<a href= "https://github.com/1337list/test-data/blob/master/tweet_json/tweet_json_schema.json#L5" >User schema</a>
+      "external_link": '<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object" >Twitter documentation</a>
     },
     "geo": {
-      "$id": "/properties/geo",
-      "type": "null"
+      "type": "null",
+      "description": "An explanation about the purpose of this instance."
     },
     "coordinates": {
-      "$id": "/properties/coordinates",
-      "type": "null"
+      "type": "coordinates",
+      "description": "Nullable. (formerly geo) Represents the geographic location of this Tweet as reported by the user or client application. The inner coordinates array is formatted as geoJSON (longitude first, then latitude)."
     },
     "place": {
-      "$id": "/properties/place",
-      "type": "null"
+      "type": "places",
+      "description": "Nullable. When present, indicates that the tweet is associated (but not necessarily originating from) a Place ."
     },
     "contributors": {
-      "$id": "/properties/contributors",
-      "type": "null"
+      "type": "null",
+      "description": "An explanation about the purpose of this instance."
     },
     "retweeted_status": {
-      "$id": "/properties/retweeted_status",
-      "type": "object",
-      "properties": {
-        "created_at": {
-          "$id": "/properties/retweeted_status/properties/created_at",
-          "type": "string"
-        },
-        "id": {
-          "$id": "/properties/retweeted_status/properties/id",
-          "type": "integer"
-        },
-        "id_str": {
-          "$id": "/properties/retweeted_status/properties/id_str",
-          "type": "string"
-        },
-        "text": {
-          "$id": "/properties/retweeted_status/properties/text",
-          "type": "string"
-        },
-        "display_text_range": {
-          "$id": "/properties/retweeted_status/properties/display_text_range",
-          "type": "array",
-          "items": {
-            "$id": "/properties/retweeted_status/properties/display_text_range/items",
-            "type": "integer"
-          }
-        },
-        "source": {
-          "$id": "/properties/retweeted_status/properties/source",
-          "type": "string"
-        },
-        "truncated": {
-          "$id": "/properties/retweeted_status/properties/truncated",
-          "type": "boolean"
-        },
-        "in_reply_to_status_id": {
-          "$id": "/properties/retweeted_status/properties/in_reply_to_status_id",
-          "type": "null"
-        },
-        "in_reply_to_status_id_str": {
-          "$id": "/properties/retweeted_status/properties/in_reply_to_status_id_str",
-          "type": "null"
-        },
-        "in_reply_to_user_id": {
-          "$id": "/properties/retweeted_status/properties/in_reply_to_user_id",
-          "type": "null"
-        },
-        "in_reply_to_user_id_str": {
-          "$id": "/properties/retweeted_status/properties/in_reply_to_user_id_str",
-          "type": "null"
-        },
-        "in_reply_to_screen_name": {
-          "$id": "/properties/retweeted_status/properties/in_reply_to_screen_name",
-          "type": "null"
-        },
-        "user": {
-          "$id": "/properties/retweeted_status/properties/user",
-          "type": "object",
-          "properties": {
-            "id": {
-              "$id": "/properties/retweeted_status/properties/user/properties/id",
-              "type": "integer"
-            },
-            "id_str": {
-              "$id": "/properties/retweeted_status/properties/user/properties/id_str",
-              "type": "string"
-            },
-            "name": {
-              "$id": "/properties/retweeted_status/properties/user/properties/name",
-              "type": "string"
-            },
-            "screen_name": {
-              "$id": "/properties/retweeted_status/properties/user/properties/screen_name",
-              "type": "string"
-            },
-            "location": {
-              "$id": "/properties/retweeted_status/properties/user/properties/location",
-              "type": "string"
-            },
-            "url": {
-              "$id": "/properties/retweeted_status/properties/user/properties/url",
-              "type": "string"
-            },
-            "description": {
-              "$id": "/properties/retweeted_status/properties/user/properties/description",
-              "type": "string"
-            },
-            "translator_type": {
-              "$id": "/properties/retweeted_status/properties/user/properties/translator_type",
-              "type": "string"
-            },
-            "protected": {
-              "$id": "/properties/retweeted_status/properties/user/properties/protected",
-              "type": "boolean"
-            },
-            "verified": {
-              "$id": "/properties/retweeted_status/properties/user/properties/verified",
-              "type": "boolean"
-            },
-            "followers_count": {
-              "$id": "/properties/retweeted_status/properties/user/properties/followers_count",
-              "type": "integer"
-            },
-            "friends_count": {
-              "$id": "/properties/retweeted_status/properties/user/properties/friends_count",
-              "type": "integer"
-            },
-            "listed_count": {
-              "$id": "/properties/retweeted_status/properties/user/properties/listed_count",
-              "type": "integer"
-            },
-            "favourites_count": {
-              "$id": "/properties/retweeted_status/properties/user/properties/favourites_count",
-              "type": "integer"
-            },
-            "statuses_count": {
-              "$id": "/properties/retweeted_status/properties/user/properties/statuses_count",
-              "type": "integer"
-            },
-            "created_at": {
-              "$id": "/properties/retweeted_status/properties/user/properties/created_at",
-              "type": "string"
-            },
-            "utc_offset": {
-              "$id": "/properties/retweeted_status/properties/user/properties/utc_offset",
-              "type": "integer"
-            },
-            "time_zone": {
-              "$id": "/properties/retweeted_status/properties/user/properties/time_zone",
-              "type": "string"
-            },
-            "geo_enabled": {
-              "$id": "/properties/retweeted_status/properties/user/properties/geo_enabled",
-              "type": "boolean"
-            },
-            "lang": {
-              "$id": "/properties/retweeted_status/properties/user/properties/lang",
-              "type": "string"
-            },
-            "contributors_enabled": {
-              "$id": "/properties/retweeted_status/properties/user/properties/contributors_enabled",
-              "type": "boolean"
-            },
-            "is_translator": {
-              "$id": "/properties/retweeted_status/properties/user/properties/is_translator",
-              "type": "boolean"
-            },
-            "profile_background_color": {
-              "$id": "/properties/retweeted_status/properties/user/properties/profile_background_color",
-              "type": "string"
-            },
-            "profile_background_image_url": {
-              "$id": "/properties/retweeted_status/properties/user/properties/profile_background_image_url",
-              "type": "string"
-            },
-            "profile_background_image_url_https": {
-              "$id": "/properties/retweeted_status/properties/user/properties/profile_background_image_url_https",
-              "type": "string"
-            },
-            "profile_background_tile": {
-              "$id": "/properties/retweeted_status/properties/user/properties/profile_background_tile",
-              "type": "boolean"
-            },
-            "profile_link_color": {
-              "$id": "/properties/retweeted_status/properties/user/properties/profile_link_color",
-              "type": "string"
-            },
-            "profile_sidebar_border_color": {
-              "$id": "/properties/retweeted_status/properties/user/properties/profile_sidebar_border_color",
-              "type": "string"
-            },
-            "profile_sidebar_fill_color": {
-              "$id": "/properties/retweeted_status/properties/user/properties/profile_sidebar_fill_color",
-              "type": "string"
-            },
-            "profile_text_color": {
-              "$id": "/properties/retweeted_status/properties/user/properties/profile_text_color",
-              "type": "string"
-            },
-            "profile_use_background_image": {
-              "$id": "/properties/retweeted_status/properties/user/properties/profile_use_background_image",
-              "type": "boolean"
-            },
-            "profile_image_url": {
-              "$id": "/properties/retweeted_status/properties/user/properties/profile_image_url",
-              "type": "string"
-            },
-            "profile_image_url_https": {
-              "$id": "/properties/retweeted_status/properties/user/properties/profile_image_url_https",
-              "type": "string"
-            },
-            "profile_banner_url": {
-              "$id": "/properties/retweeted_status/properties/user/properties/profile_banner_url",
-              "type": "string"
-            },
-            "default_profile": {
-              "$id": "/properties/retweeted_status/properties/user/properties/default_profile",
-              "type": "boolean"
-            },
-            "default_profile_image": {
-              "$id": "/properties/retweeted_status/properties/user/properties/default_profile_image",
-              "type": "boolean"
-            },
-            "following": {
-              "$id": "/properties/retweeted_status/properties/user/properties/following",
-              "type": "null"
-            },
-            "follow_request_sent": {
-              "$id": "/properties/retweeted_status/properties/user/properties/follow_request_sent",
-              "type": "null"
-            },
-            "notifications": {
-              "$id": "/properties/retweeted_status/properties/user/properties/notifications",
-              "type": "null"
-            }
-          }
-        },
-        "geo": {
-          "$id": "/properties/retweeted_status/properties/geo",
-          "type": "null"
-        },
-        "coordinates": {
-          "$id": "/properties/retweeted_status/properties/coordinates",
-          "type": "null"
-        },
-        "place": {
-          "$id": "/properties/retweeted_status/properties/place",
-          "type": "null"
-        },
-        "contributors": {
-          "$id": "/properties/retweeted_status/properties/contributors",
-          "type": "null"
-        },
-        "is_quote_status": {
-          "$id": "/properties/retweeted_status/properties/is_quote_status",
-          "type": "boolean"
-        },
-        "extended_tweet": {
-          "$id": "/properties/retweeted_status/properties/extended_tweet",
-          "type": "object",
-          "properties": {
-            "full_text": {
-              "$id": "/properties/retweeted_status/properties/extended_tweet/properties/full_text",
-              "type": "string"
-            },
-            "display_text_range": {
-              "$id": "/properties/retweeted_status/properties/extended_tweet/properties/display_text_range",
-              "type": "array",
-              "items": {
-                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/display_text_range/items",
-                "type": "integer"
-              }
-            },
-            "entities": {
-              "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities",
-              "type": "object",
-              "properties": {
-                "hashtags": {
-                  "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/hashtags",
-                  "type": "array"
-                },
-                "urls": {
-                  "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/urls",
-                  "type": "array"
-                },
-                "user_mentions": {
-                  "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/user_mentions",
-                  "type": "array"
-                },
-                "symbols": {
-                  "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/symbols",
-                  "type": "array"
-                },
-                "media": {
-                  "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media",
-                  "type": "array",
-                  "items": {
-                    "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items",
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/id",
-                        "type": "integer"
-                      },
-                      "id_str": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/id_str",
-                        "type": "string"
-                      },
-                      "indices": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/indices",
-                        "type": "array",
-                        "items": {
-                          "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/indices/items",
-                          "type": "integer"
-                        }
-                      },
-                      "media_url": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/media_url",
-                        "type": "string"
-                      },
-                      "media_url_https": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/media_url_https",
-                        "type": "string"
-                      },
-                      "url": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/url",
-                        "type": "string"
-                      },
-                      "display_url": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/display_url",
-                        "type": "string"
-                      },
-                      "expanded_url": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/expanded_url",
-                        "type": "string"
-                      },
-                      "type": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/type",
-                        "type": "string"
-                      },
-                      "sizes": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/sizes",
-                        "type": "object",
-                        "properties": {
-                          "thumb": {
-                            "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/sizes/properties/thumb",
-                            "type": "object",
-                            "properties": {
-                              "w": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/sizes/properties/thumb/properties/w",
-                                "type": "integer"
-                              },
-                              "h": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/sizes/properties/thumb/properties/h",
-                                "type": "integer"
-                              },
-                              "resize": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/sizes/properties/thumb/properties/resize",
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "large": {
-                            "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/sizes/properties/large",
-                            "type": "object",
-                            "properties": {
-                              "w": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/sizes/properties/large/properties/w",
-                                "type": "integer"
-                              },
-                              "h": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/sizes/properties/large/properties/h",
-                                "type": "integer"
-                              },
-                              "resize": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/sizes/properties/large/properties/resize",
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "medium": {
-                            "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/sizes/properties/medium",
-                            "type": "object",
-                            "properties": {
-                              "w": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/sizes/properties/medium/properties/w",
-                                "type": "integer"
-                              },
-                              "h": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/sizes/properties/medium/properties/h",
-                                "type": "integer"
-                              },
-                              "resize": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/sizes/properties/medium/properties/resize",
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "small": {
-                            "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/sizes/properties/small",
-                            "type": "object",
-                            "properties": {
-                              "w": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/sizes/properties/small/properties/w",
-                                "type": "integer"
-                              },
-                              "h": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/sizes/properties/small/properties/h",
-                                "type": "integer"
-                              },
-                              "resize": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/sizes/properties/small/properties/resize",
-                                "type": "string"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      "video_info": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/video_info",
-                        "type": "object",
-                        "properties": {
-                          "aspect_ratio": {
-                            "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/video_info/properties/aspect_ratio",
-                            "type": "array",
-                            "items": {
-                              "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/video_info/properties/aspect_ratio/items",
-                              "type": "integer"
-                            }
-                          },
-                          "duration_millis": {
-                            "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/video_info/properties/duration_millis",
-                            "type": "integer"
-                          },
-                          "variants": {
-                            "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/video_info/properties/variants",
-                            "type": "array",
-                            "items": {
-                              "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/video_info/properties/variants/items",
-                              "type": "object",
-                              "properties": {
-                                "bitrate": {
-                                  "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/video_info/properties/variants/items/properties/bitrate",
-                                  "type": "integer"
-                                },
-                                "content_type": {
-                                  "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/video_info/properties/variants/items/properties/content_type",
-                                  "type": "string"
-                                },
-                                "url": {
-                                  "$id": "/properties/retweeted_status/properties/extended_tweet/properties/entities/properties/media/items/properties/video_info/properties/variants/items/properties/url",
-                                  "type": "string"
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "extended_entities": {
-              "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities",
-              "type": "object",
-              "properties": {
-                "media": {
-                  "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media",
-                  "type": "array",
-                  "items": {
-                    "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items",
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/id",
-                        "type": "integer"
-                      },
-                      "id_str": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/id_str",
-                        "type": "string"
-                      },
-                      "indices": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/indices",
-                        "type": "array",
-                        "items": {
-                          "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/indices/items",
-                          "type": "integer"
-                        }
-                      },
-                      "media_url": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/media_url",
-                        "type": "string"
-                      },
-                      "media_url_https": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/media_url_https",
-                        "type": "string"
-                      },
-                      "url": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/url",
-                        "type": "string"
-                      },
-                      "display_url": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/display_url",
-                        "type": "string"
-                      },
-                      "expanded_url": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/expanded_url",
-                        "type": "string"
-                      },
-                      "type": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/type",
-                        "type": "string"
-                      },
-                      "sizes": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/sizes",
-                        "type": "object",
-                        "properties": {
-                          "thumb": {
-                            "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/sizes/properties/thumb",
-                            "type": "object",
-                            "properties": {
-                              "w": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/sizes/properties/thumb/properties/w",
-                                "type": "integer"
-                              },
-                              "h": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/sizes/properties/thumb/properties/h",
-                                "type": "integer"
-                              },
-                              "resize": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/sizes/properties/thumb/properties/resize",
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "large": {
-                            "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/sizes/properties/large",
-                            "type": "object",
-                            "properties": {
-                              "w": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/sizes/properties/large/properties/w",
-                                "type": "integer"
-                              },
-                              "h": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/sizes/properties/large/properties/h",
-                                "type": "integer"
-                              },
-                              "resize": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/sizes/properties/large/properties/resize",
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "medium": {
-                            "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/sizes/properties/medium",
-                            "type": "object",
-                            "properties": {
-                              "w": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/sizes/properties/medium/properties/w",
-                                "type": "integer"
-                              },
-                              "h": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/sizes/properties/medium/properties/h",
-                                "type": "integer"
-                              },
-                              "resize": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/sizes/properties/medium/properties/resize",
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "small": {
-                            "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/sizes/properties/small",
-                            "type": "object",
-                            "properties": {
-                              "w": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/sizes/properties/small/properties/w",
-                                "type": "integer"
-                              },
-                              "h": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/sizes/properties/small/properties/h",
-                                "type": "integer"
-                              },
-                              "resize": {
-                                "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/sizes/properties/small/properties/resize",
-                                "type": "string"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      "video_info": {
-                        "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/video_info",
-                        "type": "object",
-                        "properties": {
-                          "aspect_ratio": {
-                            "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/video_info/properties/aspect_ratio",
-                            "type": "array",
-                            "items": {
-                              "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/video_info/properties/aspect_ratio/items",
-                              "type": "integer"
-                            }
-                          },
-                          "duration_millis": {
-                            "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/video_info/properties/duration_millis",
-                            "type": "integer"
-                          },
-                          "variants": {
-                            "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/video_info/properties/variants",
-                            "type": "array",
-                            "items": {
-                              "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/video_info/properties/variants/items",
-                              "type": "object",
-                              "properties": {
-                                "bitrate": {
-                                  "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/video_info/properties/variants/items/properties/bitrate",
-                                  "type": "integer"
-                                },
-                                "content_type": {
-                                  "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/video_info/properties/variants/items/properties/content_type",
-                                  "type": "string"
-                                },
-                                "url": {
-                                  "$id": "/properties/retweeted_status/properties/extended_tweet/properties/extended_entities/properties/media/items/properties/video_info/properties/variants/items/properties/url",
-                                  "type": "string"
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "quote_count": {
-          "$id": "/properties/retweeted_status/properties/quote_count",
-          "type": "integer"
-        },
-        "reply_count": {
-          "$id": "/properties/retweeted_status/properties/reply_count",
-          "type": "integer"
-        },
-        "retweet_count": {
-          "$id": "/properties/retweeted_status/properties/retweet_count",
-          "type": "integer"
-        },
-        "favorite_count": {
-          "$id": "/properties/retweeted_status/properties/favorite_count",
-          "type": "integer"
-        },
-        "entities": {
-          "$id": "/properties/retweeted_status/properties/entities",
-          "type": "object",
-          "properties": {
-            "hashtags": {
-              "$id": "/properties/retweeted_status/properties/entities/properties/hashtags",
-              "type": "array"
-            },
-            "urls": {
-              "$id": "/properties/retweeted_status/properties/entities/properties/urls",
-              "type": "array",
-              "items": {
-                "$id": "/properties/retweeted_status/properties/entities/properties/urls/items",
-                "type": "object",
-                "properties": {
-                  "url": {
-                    "$id": "/properties/retweeted_status/properties/entities/properties/urls/items/properties/url",
-                    "type": "string"
-                  },
-                  "expanded_url": {
-                    "$id": "/properties/retweeted_status/properties/entities/properties/urls/items/properties/expanded_url",
-                    "type": "string"
-                  },
-                  "display_url": {
-                    "$id": "/properties/retweeted_status/properties/entities/properties/urls/items/properties/display_url",
-                    "type": "string"
-                  },
-                  "indices": {
-                    "$id": "/properties/retweeted_status/properties/entities/properties/urls/items/properties/indices",
-                    "type": "array",
-                    "items": {
-                      "$id": "/properties/retweeted_status/properties/entities/properties/urls/items/properties/indices/items",
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            },
-            "user_mentions": {
-              "$id": "/properties/retweeted_status/properties/entities/properties/user_mentions",
-              "type": "array"
-            },
-            "symbols": {
-              "$id": "/properties/retweeted_status/properties/entities/properties/symbols",
-              "type": "array"
-            }
-          }
-        },
-        "favorited": {
-          "$id": "/properties/retweeted_status/properties/favorited",
-          "type": "boolean"
-        },
-        "retweeted": {
-          "$id": "/properties/retweeted_status/properties/retweeted",
-          "type": "boolean"
-        },
-        "possibly_sensitive": {
-          "$id": "/properties/retweeted_status/properties/possibly_sensitive",
-          "type": "boolean"
-        },
-        "filter_level": {
-          "$id": "/properties/retweeted_status/properties/filter_level",
-          "type": "string"
-        },
-        "lang": {
-          "$id": "/properties/retweeted_status/properties/lang",
-          "type": "string"
-        }
-      }
+      "type": "Tweet",
+      "description": "Users can amplify the broadcast of Tweets authored by other users by retweeting . Retweets can be distinguished from typical Tweets by the existence of a retweeted_status attribute. This attribute contains a representation of the original Tweet that was retweeted. Note that retweets of retweets do not show representations of the intermediary retweet, but only the original Tweet. (Users can also unretweet a retweet they created by deleting their retweet.)",
+      "internal_link": '<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Tweet schema</a>'
+      "external_link": '<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object" >Twitter documentation</a>'
     },
     "is_quote_status": {
-      "$id": "/properties/is_quote_status",
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Indicates whether this is a Quoted Tweet."
     },
     "quote_count": {
-      "$id": "/properties/quote_count",
-      "type": "integer"
+      "type": "integer",
+      "description": "Nullable. Indicates approximately how many times this Tweet has been quoted by Twitter users."
     },
     "reply_count": {
-      "$id": "/properties/reply_count",
-      "type": "integer"
+      "type": "integer",
+      "description": "Number of times this Tweet has been replied to."
     },
     "retweet_count": {
-      "$id": "/properties/retweet_count",
-      "type": "integer"
+      "type": "integer",
+      "description": "Number of times this Tweet has been retweeted."
     },
     "favorite_count": {
-      "$id": "/properties/favorite_count",
-      "type": "integer"
+      "type": "integer",
+      "description": "Nullable. Indicates approximately how many times this Tweet has been liked by Twitter users."
     },
     "entities": {
-      "$id": "/properties/entities",
-      "type": "object",
-      "properties": {
-        "hashtags": {
-          "$id": "/properties/entities/properties/hashtags",
-          "type": "array"
-        },
-        "urls": {
-          "$id": "/properties/entities/properties/urls",
-          "type": "array"
-        },
-        "user_mentions": {
-          "$id": "/properties/entities/properties/user_mentions",
-          "type": "array",
-          "items": {
-            "$id": "/properties/entities/properties/user_mentions/items",
-            "type": "object",
-            "properties": {
-              "screen_name": {
-                "$id": "/properties/entities/properties/user_mentions/items/properties/screen_name",
-                "type": "string"
-              },
-              "name": {
-                "$id": "/properties/entities/properties/user_mentions/items/properties/name",
-                "type": "string"
-              },
-              "id": {
-                "$id": "/properties/entities/properties/user_mentions/items/properties/id",
-                "type": "integer"
-              },
-              "id_str": {
-                "$id": "/properties/entities/properties/user_mentions/items/properties/id_str",
-                "type": "string"
-              },
-              "indices": {
-                "$id": "/properties/entities/properties/user_mentions/items/properties/indices",
-                "type": "array",
-                "items": {
-                  "$id": "/properties/entities/properties/user_mentions/items/properties/indices/items",
-                  "type": "integer"
-                }
-              }
-            }
-          }
-        },
-        "symbols": {
-          "$id": "/properties/entities/properties/symbols",
-          "type": "array"
-        }
-      }
+      "type": "Entities",
+      "description": "Entities which have been parsed out of the text of the Tweet. Additionally see Entities in Twitter Objects ."
+      "internal_link": '<a href= "https://github.com/1337list/test-data/tree/master/tweet_json" >Entities schema</a>'
+      "external_link": '<a href= "https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object" >Twitter documentation</a>'
     },
     "favorited": {
-      "$id": "/properties/favorited",
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Nullable. Indicates whether this Tweet has been liked by the authenticating user."
     },
     "retweeted": {
-      "$id": "/properties/retweeted",
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Indicates whether this Tweet has been Retweeted by the authenticating user."
     },
     "filter_level": {
-      "$id": "/properties/filter_level",
-      "type": "string"
+      "type": "string",
+      "description": "Indicates the maximum value of the filter_level parameter which may be used and still stream this Tweet. So a value of medium will be streamed on none, low, and medium streams."
     },
     "lang": {
-      "$id": "/properties/lang",
-      "type": "string"
+      "type": "string",
+      "description": "Nullable. When present, indicates a BCP 47 language identifier corresponding to the machine-detected language of the Tweet text, or und if no language could be detected. See more documentation HERE"
     },
     "timestamp_ms": {
-      "$id": "/properties/timestamp_ms",
-      "type": "string"
+      "type": "string",
+      "description": "An explanation about the purpose of this instance."
     }
   }
 }
